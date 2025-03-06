@@ -5,7 +5,7 @@ Also, before starting you need to create a network in your local docker envirome
 - docker create network my_network
 
 - frontend-build: docker build -t folio-front .
-- frontend-run: docker run folio-front
+- frontend-run: docker run -p 3000:80 folio-front
 
 - database-build: docker build -t folio-db .
 - database-run: docker run --name database --network my_network -p 5432:5432 folio-db
